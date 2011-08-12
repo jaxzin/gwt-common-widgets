@@ -1,0 +1,44 @@
+/*
+  This style controls the look of the column that is still attached to the table during the drag event.
+  This style is applied on a 'td' level, that is, to the individual table cells that make up the column.
+*/
+.gwt-DraggableGrid-draggedOriginal {
+    opacity: 0.25; /*opacity setting for everyone else*/
+    filter:alpha(opacity=25); /*opacity setting for IE*/
+}
+
+/*
+  This style controls the look of the column that is detached from the table and
+  tracks the cursor during the drag event.  The detached column is actually a full HTMLTable, and this
+  style is applied to that level.
+*/
+.gwt-DraggableGrid-draggedCopy {
+    opacity: 0.9; /*opacity setting for everyone else*/
+    filter: alpha(opacity=90); /*opacity setting for IE*/
+    /* Why doesn't the following work? */
+    border-left: none;
+    border-right: none;
+}
+
+.dfte-Table {
+    font-family: "Tahoma", sans-serif;
+    font-size: 10pt;
+    background-color: white;
+    border: 1px solid #AAA;
+    margin: 0px;
+}
+
+.dfte-Table td {
+    border-top: 1px solid #CCC;
+    margin: 0px;
+}
+
+.dfte-TableHeader {
+    background-color: #EEE;
+    cursor: pointer;
+    cursor: hand;
+}
+.dfte-TableHeader td {
+    border-left: 1px solid white;
+    border-right: 1px solid #888;
+}

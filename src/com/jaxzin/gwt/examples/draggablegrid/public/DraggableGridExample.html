@@ -1,0 +1,75 @@
+<html>
+	<head>
+	
+		<!--                                           -->
+		<!-- Any title is fine                         -->
+		<!--                                           -->
+		<title>Example Usage of DraggableGrid</title>
+
+		<!--                                           -->
+		<!-- Use normal html, such as style            -->
+		<!--                                           -->
+        <link rel="stylesheet" type="text/css" href="http://jaxzin.com/styles/jaxzin.css"></link>
+        <link rel="stylesheet" type="text/css" href="DraggableGridExample.css"></link>
+        <!--<style>-->
+			<!--body,td,a,div,.p{font-family:arial,sans-serif; color:red;}-->
+			<!--div,td{color:#000000}-->
+			<!--a:link,.w,.w a:link{color:#0000cc}-->
+			<!--a:visited{color:#551a8b}-->
+			<!--a:active{color:#ff0000}-->
+		<!--</style>-->
+
+		<!--                                           -->
+		<!-- The module reference below is the link    -->
+		<!-- between html and your Web Toolkit module  -->		
+		<!--                                           -->
+		<meta name='gwt:module' content='com.jaxzin.gwt.examples.draggablegrid.DraggableGridExample'>
+		
+	</head>
+
+	<!--                                           -->
+	<!-- The body can have arbitrary html, or      -->
+	<!-- you can leave the body empty if you want  -->
+	<!-- to create a completely dynamic ui         -->
+	<!--                                           -->
+	<body>
+
+		<!--                                            -->
+		<!-- This script is required bootstrap stuff.   -->
+		<!-- You can put it in the HEAD, but startup    -->
+		<!-- is slightly faster if you include it here. -->
+		<!--                                            -->
+		<script language="javascript" src="gwt.js"></script>
+
+		<!-- OPTIONAL: include this if you want history support -->
+		<iframe id="__gwt_historyFrame" style="width:0;height:0;border:0"></iframe>
+
+		<h1>DraggableGrid</h1>
+
+		<p>
+            This is an example of a DraggableGrid.  It extends the GWT Grid to support draggable columns.
+            The DraggableGrid only implements the logic to detect the begin, movement and end of a column drag.
+            The default ColumnDragListener that is attached is responsible for creating the visual representation
+            of the column drag event, such as the dimmed column and detached column and the actual movement of column
+            data. If the default listener is not appropriate for your needs you can remove it with a call to
+            removeDefaultListener().
+            The checkboxes allow you to play with three of the properties available to control
+            the behavior of the DraggableGrid.  The text area displays information about the events the DraggableGrid
+            is producing.  See the javadoc for the DraggableGrid for more detail.
+        </p>
+        <p>
+            <b>Usage:</b><br>
+            <ol>
+                <li>Add the jaxzin-gwt-1.1.jar to your project's classpath.</li>
+                <li>To the gwt.xml for your Widget, add the following: <code>&lt;inherits name='com.jaxzin.gwt.ui.DraggableGrid'/&gt;</code></li>
+                <li>Add a new DraggableGrid to your widget, or use it as a drop-in replacement for an existing Grid in your Widget.</li>
+            </ol>
+        </p>
+
+        <table align=center>
+			<tr>
+				<td id="slot1"></td><td id="slot2"></td>
+			</tr>
+		</table>
+	</body>
+</html>
